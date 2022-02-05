@@ -1,0 +1,19 @@
+/* Fonts */
+
+/* font-family: Montserrat (Regular) */
+@font-face{
+    font-family: Montserrat;
+    src: url('/fonts/Montserrat.ttf');
+}
+
+/* font-family: Roboto (Bold) */
+@font-face{
+    font-family: Roboto;
+    src: url('/fonts/RobotoBold.ttf');
+}
+
+/* font-family: Roboto Mono (Regular)*/
+@font-face{
+    font-family: RobotoMono;
+    src: url('/fonts/RobotoMono.ttf');
+}

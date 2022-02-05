@@ -1,0 +1,277 @@
+/* Importing fonts */
+@import url('/css/fonts.css');
+
+/* ------------------------------Globals------------------------------ */
+/* Setting the parameters of the app */
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+/* Setting all p elements to the font below */
+p, span {
+	font-family: 'RobotoMono';
+	display: inline;
+	text-transform: capitalize;
+}
+
+/* Setting the generic style of all buttons */
+button {
+	font-family: 'RobotoMono';
+	border-radius: 25px;
+	padding: 0px 15px;
+	margin: 3px 2px;
+	background-color: #2592c5;
+	color: #fff;
+	text-transform: uppercase;
+	border: 2px solid #fff;
+}
+
+/* When user hovers over button, it changes colour */
+button:hover {
+	background-color: #a348b9 !important;
+	color: #ffffff;
+	font-weight: bold;
+}
+/* ---------------X---------------Globals---------------X--------------- */
+
+/* ------------------------------IDs------------------------------ */
+#sidebar {
+	/* To enable user to scroll through the tools */
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+#selectBtn {
+	margin-top: 80px;
+}
+
+#editableShapesBtn, #epicPenOptions {
+	display: flex;
+}
+/* ---------------X---------------IDs---------------X--------------- */
+
+/* ------------------------------Classes + Types------------------------------ */
+/* ----------Setting the style of the eraser button---------- */
+/* Initially bg is transparent */
+button .transparent, .transparent {
+	background-color: rgba(255, 255, 255, 0);
+	border: solid 2px rgba(255, 255, 255, 0);
+	padding: 1px 25px;
+}
+
+/* When the user hovers over btn, the bg changes */
+button .transparent:hover {
+	background-color: rgba(255, 255, 255, 0) !important;
+	padding: 5px;
+	transform: scale(1.1);
+}
+/* -----X-----Setting the style of the eraser button-----X----- */
+/*----------Tooltip box----------*/
+/* Tooltip box */
+.tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+	bottom: 80%;
+	left: 105%;
+  background-color: #40837dc2;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+	font-size: 10px;
+ 
+  /* Position the tooltip text*/
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when user hovers over */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/*-----X-----Tooltip box-----X-----*/
+/*----------Erasetip box----------*/
+/* Erasetip box */
+.erasetip {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Erasetip text */
+.erasetip .erasetiptext {
+  visibility: hidden;
+  width: 80px;
+	top: 100%;
+	right: 0%;
+  background-color: #40837dc2;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+	font-size: 10px;
+ 
+  /* Position the erasetip text*/
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the erasetip text when user hovers over */
+.erasetip:hover .erasetiptext {
+  visibility: visible;
+}
+/*-----X-----Erasetip box-----X-----*/
+
+/* ----------Setting the slider---------- */
+/* Styling the out portion of the slider */
+.slider {
+	/* Overridding the default style*/
+	-webkit-appearance: none;
+	height: 10px;
+	border-radius: 20px;
+	opacity: 0.9;
+}
+
+ /* Styling the adjustable portion of the slider */
+.slider::-webkit-slider-thumb {
+	/* Overridding the default style*/
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%; 
+	background: #a348b9;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+/* -----X-----Setting the slider-----X----- */
+/* ----------Styling the select menu ----------*/
+.select {
+	background-color:#57af5e;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	padding: 2px;
+}
+/* -----X-----Styling the select menu ----X-----*/
+
+/* ----------Styling the input box---------- */
+.inputText {
+	background-color:#65bea8;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	padding: 2px;
+	margin-top: 2px;
+}
+/* -----X-----Styling the input box----X------ */
+
+[type='range'] {
+	/* Applying some margin to the range */
+	margin: 5px;
+}
+
+.flex {
+	display: flex;
+}
+
+/* ----------Styling the overall structure of the app---------- */
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif;
+}
+
+.header img {
+	/* so that the logo doesn't touch the sides of the header */
+	height: 90%;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+.site-logo {
+	/* Adjusting the size of the logo */
+	width: 65%;
+	padding-left: calc(10% + 50px);
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.sideBarItem {
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px;
+}
+
+.sideBarItem:hover {
+	/* on hover there is a solid magenta border */
+	border: 3px solid #FF00FF !important;
+}
+
+.sideBarItem img {
+	max-height: 50px;
+	max-Width:50px;
+}
+
+.colourPalette {
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options {
+	grid-area: options;
+	padding: 15px 15px 10px 25px;
+}
+
+.colourSwatches {
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+.shapeOptions {
+	grid-area: shapeOptions;
+	padding-top: 50px;
+}
+
+.wrapper {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 70px 290px  minmax(20px, 1fr) 420px;
+	grid-template-rows: 35px minmax(500px, 1fr) 40px 140px;
+	grid-template-areas:
+			"header header header header"
+			"sidebar content content content"
+			"colourP colourP options shapeOptions"
+			"colourP colourP options shapeOptions";
+	background-color: #fff;
+	color: #444;
+}
+
+.box {
+	background-color: #202020;
+	color: #fff;
+	font-size: 150%;
+}
+
+.header {
+	background-color: #202020;
+}
+/* -----X-----Styling the overall structure of the app-----X----- */
+/* ---------------X---------------Classes + Types---------------X--------------- */

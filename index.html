@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="/assets/splatter-studio-icon-purple.svg">
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/p5.js"></script>
+    <script src="lib/p5.dom.min.js"></script>
+
+    <script src="sketch.js"></script>
+
+    <!-- add extra scripts below -->
+    <script src="toolbox.js"></script>
+    <script src="helperFunctions.js"></script>
+
+    <script src="epicPenTool.js"></script>
+    <script src="lineToTool.js"></script>
+    <script src="sprayCanTool.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+    <script src="stickerTool.js"></script>
+    <script src="editableShapesTool.js"></script>
+    <script src="scissorTool.js"></script>
+    <script src="textTool.js"></script>
+    <script src="imageUploadTool.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+  </head>
+  <body>
+  	<div class="wrapper">
+      <div class="box header flex">
+        <!-- Toggle between logos on hover to add user interaction -->
+        <img id="app-logo" src="/assets/splatter-studio-logo.svg" 
+        alt="site-logo" class="site-logo" 
+        onmouseover="this.src='/assets/splatter-studio-logo-hover.svg'" 
+        onmouseout="this.src='/assets/splatter-studio-logo.svg'">
+        <div class="erasetip tooltip">
+          <button id="eraseButton" class="transparent">
+            <!--Toggle between eraser icons on hover to add user interaction-->
+            <img src="/assets/eraser.svg" alt="eraser-logo" 
+            onmouseover="this.src='/assets/eraser.svg'" 
+            onmouseout="this.src='/assets/eraser-yellow.svg'">
+          </button>
+          <span class="erasetiptext">Eraser</span>
+        </div>
+        <button id="clearButton" class="btn" style="margin-top: 7px; 
+        margin-bottom: 4px;">
+          Clear
+        </button>
+        <button id="saveImageButton" class="btn" style="margin-top: 7px;
+        margin-bottom: 4px;">
+          Save
+        </button>
+      </div>
+
+      <div class="tooltip">
+        <div class="box" id="sidebar">
+        </div>
+        <span class="tooltiptext">Pen tool, line tool, spray tool,
+          mirror tool, sticker tool, edit shape tool, scissor tool, text tool,
+          image tool.</span>
+      </div>
+      
+      <div id="content"></div>
+
+      <div class="box colourPalette">
+        <div id="colourPickerArea" style="margin-top: 5px; display: flexbox;">
+          <p style="display: inline; font-size: 16px; margin-left: 70px; 
+          padding-top: 40px;">
+            Tool Colour:
+          </p>
+        </div>
+      </div>
+
+      <div class="box options">
+        <div id="imgFilters"></div>
+        <div id="textNote"></div>
+      </div>
+
+      <div class="box shapeOptions">
+        <div id="epicPenOptions"></div>
+        <div id="lineToOptions"></div>
+        <div id="sprayCanOptions"></div>
+        <div id="mirrorOptions"></div>
+
+        <div class="stickerTool">
+          <div id="stickerType"></div>
+          <div id="stickerSlider"></div>
+          <div id="nstickerSlider"></div>
+          <div id="eraser"></div>
+        </div>
+
+        <div id="editableShapesBtn"></div>
+        <div id="scissorToolBtn"></div>
+        <div id="textToolOptions"></div>
+        <div id="imageUploadToolOptions"></div>
+        </div> 
+      </div>
+	</div>
+  </body>
+</html>
